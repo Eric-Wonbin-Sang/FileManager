@@ -1,6 +1,8 @@
 import os
 import time
 
+from General import Constants
+
 
 def get_location_list(directories_txt):
 
@@ -46,8 +48,7 @@ def get_change_status(location_key, curr_file_list, prev_file_list):
 
 def main():
 
-    directories_txt = "Directories.txt"
-    location_list = get_location_list(directories_txt)
+    location_list = get_location_list(Constants.directories_txt)
 
     location_path_list_dict = get_location_path_list_dict(location_list)
     prev_location_path_list_dict = location_path_list_dict
